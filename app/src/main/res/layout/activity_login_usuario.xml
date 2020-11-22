@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.andres.OdontoTime.Vista.loginUsuario">
+
+    <ImageView
+        android:id="@+id/textView6"
+        android:layout_width="252dp"
+        android:layout_height="237dp"
+        android:layout_above="@+id/email_User"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="0dp"
+        android:layout_marginBottom="5dp"
+        android:src="@mipmap/imagen_ot"
+        android:textAlignment="center" />
+
+    <Button
+        android:id="@+id/boton_InicioUser"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:layout_width="133dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="28dp"
+        android:layout_x="41dp"
+        android:layout_y="212dp"
+        android:text="Iniciar sesión"
+        tools:layout_editor_absoluteX="187dp"
+        tools:layout_editor_absoluteY="233dp" />
+
+    <EditText
+        android:id="@+id/email_User"
+        android:layout_width="270dp"
+        android:layout_height="43dp"
+        android:layout_above="@+id/contraseña_User"
+        android:layout_alignStart="@+id/contraseña_User"
+        android:layout_alignLeft="@+id/contraseña_User"
+        android:layout_marginStart="-3dp"
+        android:layout_marginLeft="-3dp"
+        android:layout_marginBottom="24dp"
+        android:layout_x="55dp"
+        android:layout_y="90dp"
+        android:ems="10"
+        android:hint="email"
+        android:inputType="textPersonName"
+        tools:layout_editor_absoluteX="73dp"
+        tools:layout_editor_absoluteY="113dp" />
+
+    <EditText
+        android:id="@+id/contraseña_User"
+        android:layout_width="270dp"
+        android:layout_height="43dp"
+        android:layout_above="@+id/boton_InicioUser"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="24dp"
+        android:layout_x="56dp"
+        android:layout_y="143dp"
+        android:ems="10"
+        android:hint="password"
+        android:inputType="textPassword"
+        tools:layout_editor_absoluteX="73dp"
+        tools:layout_editor_absoluteY="174dp" />
+
+</RelativeLayout>

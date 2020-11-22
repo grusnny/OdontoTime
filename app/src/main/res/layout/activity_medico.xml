@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.andres.OdontoTime.Vista.Medico">
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="303dp"
+        android:layout_height="27dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:text="Prescripción médica del paciente"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tex_documento"
+        android:layout_width="91dp"
+        android:layout_height="26dp"
+        android:layout_alignBaseline="@+id/editText_documento"
+        android:layout_alignStart="@+id/tex_correo"
+        android:layout_alignLeft="@+id/tex_correo"
+        android:layout_alignBottom="@+id/editText_documento"
+        android:layout_marginEnd="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_toStartOf="@+id/editText_documento"
+        android:layout_toLeftOf="@+id/editText_documento"
+        android:text="Documento"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+    <TextView
+        android:id="@+id/tex_correo"
+        android:layout_width="74dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/text_nombre"
+        android:layout_alignStart="@+id/spinner_medicamentos"
+        android:layout_alignLeft="@+id/spinner_medicamentos"
+        android:layout_marginStart="2dp"
+        android:layout_marginLeft="2dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="-77dp"
+        android:layout_marginRight="-77dp"
+        android:layout_toStartOf="@+id/spinner_medicamentos"
+        android:layout_toLeftOf="@+id/spinner_medicamentos"
+        android:text="Correo:"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tex_documento" />
+
+    <TextView
+        android:id="@+id/correo"
+        android:layout_width="241dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/tex_correo"
+        android:layout_alignStart="@+id/nombre"
+        android:layout_alignLeft="@+id/nombre"
+        android:layout_alignEnd="@+id/spinner_medicamentos"
+        android:layout_alignRight="@+id/spinner_medicamentos"
+        android:layout_alignBottom="@+id/tex_correo"
+        android:layout_marginStart="-1dp"
+        android:layout_marginLeft="-1dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginRight="1dp"
+        android:layout_marginBottom="0dp"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tex_documento" />
+
+    <TextView
+        android:id="@+id/nombre"
+        android:layout_width="241dp"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/spinner_medicamentos"
+        android:layout_alignRight="@+id/spinner_medicamentos"
+        android:layout_alignBottom="@+id/text_nombre"
+        android:layout_marginStart="14dp"
+        android:layout_marginLeft="14dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginRight="1dp"
+        android:layout_marginBottom="-1dp"
+        android:layout_toEndOf="@+id/text_nombre"
+        android:layout_toRightOf="@+id/text_nombre"
+        android:fadeScrollbars="true"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tex_documento" />
+
+    <EditText
+        android:id="@+id/editText_documento"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView3"
+        android:layout_alignEnd="@+id/nombre"
+        android:layout_alignRight="@+id/nombre"
+        android:layout_marginTop="26dp"
+        android:ems="10"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="wrap_content"
+        android:layout_height="22dp"
+        android:layout_above="@+id/spinner_medicamentos"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="0dp"
+        android:text="Seleccione el tipo de cita"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Spinner
+        android:id="@+id/spinner_medicamentos"
+        android:layout_width="325dp"
+        android:layout_height="38dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="151dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView7" />
+
+    <Button
+        android:id="@+id/button_enviarPres"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:layout_width="136dp"
+        android:layout_height="41dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="23dp"
+        android:drawableRight="@drawable/ic_action_save"
+        android:enabled="false"
+        android:onClick="envio"
+        android:text="Guardar "
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/text_nombre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/buscar_usuario"
+        android:layout_alignStart="@+id/spinner_medicamentos"
+        android:layout_alignLeft="@+id/spinner_medicamentos"
+        android:layout_marginStart="1dp"
+        android:layout_marginLeft="1dp"
+        android:layout_marginTop="-1dp"
+        android:text="Nombre:"
+        android:textSize="18sp" />
+
+    <Button
+        android:id="@+id/buscar_usuario"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/editText_documento"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="14dp"
+        android:drawableRight="@drawable/ic_action_buscar"
+        android:text="Buscar " />
+
+    <Button
+        android:id="@+id/fecha"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:layout_width="56dp"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/button_enviarPres"
+        android:layout_alignEnd="@+id/spinner_medicamentos"
+        android:layout_alignRight="@+id/spinner_medicamentos"
+        android:layout_marginTop="-74dp"
+        android:layout_marginEnd="183dp"
+        android:layout_marginRight="183dp"
+        android:drawableRight="@drawable/ic_action_buscar"
+        tools:drawableRight="@android:drawable/ic_menu_month" />
+
+    <Button
+        android:id="@+id/hora"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:layout_width="56dp"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/button_enviarPres"
+        android:layout_alignEnd="@+id/spinner_medicamentos"
+        android:layout_alignRight="@+id/spinner_medicamentos"
+        android:layout_marginTop="-74dp"
+        android:layout_marginEnd="84dp"
+        android:layout_marginRight="84dp"
+        android:drawableRight="@drawable/ic_action_alarm" />
+
+    <TextView
+        android:id="@+id/textViewFecha"
+        android:layout_width="42dp"
+        android:layout_height="18dp"
+        android:layout_alignStart="@+id/spinner_medicamentos"
+        android:layout_alignLeft="@+id/spinner_medicamentos"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="3dp"
+        android:layout_marginLeft="3dp"
+        android:layout_marginEnd="47dp"
+        android:layout_marginRight="47dp"
+        android:layout_marginBottom="95dp"
+        android:layout_toStartOf="@+id/button_enviarPres"
+        android:layout_toLeftOf="@+id/button_enviarPres"
+        android:text="Fecha:"
+        android:visibility="invisible" />
+
+    <TextView
+        android:id="@+id/textViewHora1"
+        android:layout_width="39dp"
+        android:layout_height="19dp"
+        android:layout_alignStart="@+id/spinner_medicamentos"
+        android:layout_alignLeft="@+id/spinner_medicamentos"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="202dp"
+        android:layout_marginLeft="202dp"
+        android:layout_marginBottom="96dp"
+        android:text="Hora:"
+        android:visibility="invisible" />
+
+    <TextView
+        android:id="@+id/textViewHora"
+        android:layout_width="67dp"
+        android:layout_height="17dp"
+        android:layout_alignStart="@+id/spinner_medicamentos"
+        android:layout_alignLeft="@+id/spinner_medicamentos"
+        android:layout_alignEnd="@+id/button_enviarPres"
+        android:layout_alignRight="@+id/button_enviarPres"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="247dp"
+        android:layout_marginLeft="247dp"
+        android:layout_marginEnd="-81dp"
+        android:layout_marginRight="-81dp"
+        android:layout_marginBottom="100dp"
+        android:visibility="invisible" />
+
+    <TextView
+        android:id="@+id/textViewDia1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/textView7"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="-31dp"
+        android:layout_marginBottom="114dp"
+        android:text="dia"
+        android:visibility="invisible" />
+
+    <TextView
+        android:id="@+id/textViewAño"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/textViewFecha"
+        android:layout_alignStart="@+id/textView7"
+        android:layout_marginStart="51dp"
+        android:layout_marginBottom="-18dp"
+        android:visibility="invisible" />
+
+    <TextView
+        android:id="@+id/textViewMes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/textViewFecha"
+        android:layout_alignStart="@+id/textView7"
+        android:layout_marginStart="5dp"
+        android:layout_marginBottom="-20dp"
+        android:visibility="invisible" />
+
+    <TextView
+        android:id="@+id/textViewDia"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/textViewFecha"
+        android:layout_alignStart="@+id/textView7"
+        android:layout_marginStart="-27dp"
+        android:layout_marginBottom="-20dp"
+        android:visibility="invisible" />
+
+    <TextView
+        android:id="@+id/textViewAño1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/textView7"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="47dp"
+        android:layout_marginBottom="113dp"
+        android:text="año"
+        android:visibility="invisible" />
+
+    <TextView
+        android:id="@+id/textViewMes1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/textView7"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="5dp"
+        android:layout_marginBottom="113dp"
+        android:text="mes"
+        android:visibility="invisible" />
+
+</RelativeLayout>

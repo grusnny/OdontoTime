@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.andres.OdontoTime.Vista.Registro">
+
+    <Button
+        android:id="@+id/boton_Registro"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:layout_width="133dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="42dp"
+        android:layout_x="41dp"
+        android:layout_y="212dp"
+        android:text="registrar "
+        android:drawableRight="@drawable/ic_action_save"
+        tools:layout_editor_absoluteX="187dp"
+        tools:layout_editor_absoluteY="233dp" />
+
+    <EditText
+        android:id="@+id/email_Registro"
+        android:layout_width="270dp"
+        android:layout_height="43dp"
+        android:layout_alignLeft="@+id/contraseña_Registro"
+        android:layout_alignParentTop="true"
+        android:layout_alignStart="@+id/contraseña_Registro"
+        android:layout_marginTop="27dp"
+        android:layout_x="55dp"
+        android:layout_y="90dp"
+        android:ems="10"
+        android:hint="email"
+        android:inputType="textPersonName"
+        tools:layout_editor_absoluteX="73dp"
+        tools:layout_editor_absoluteY="113dp" />
+
+    <EditText
+        android:id="@+id/documento_Registro"
+        android:layout_width="270dp"
+        android:layout_height="43dp"
+        android:layout_alignLeft="@+id/nombre_Registro"
+        android:layout_alignStart="@+id/nombre_Registro"
+        android:layout_below="@+id/nombre_Registro"
+        android:layout_marginTop="14dp"
+        android:layout_x="55dp"
+        android:layout_y="90dp"
+        android:ems="10"
+        android:hint="documento"
+        android:inputType="textPersonName"
+        tools:layout_editor_absoluteX="73dp"
+        tools:layout_editor_absoluteY="113dp" />
+
+    <EditText
+        android:id="@+id/nombre_Registro"
+        android:layout_width="270dp"
+        android:layout_height="43dp"
+        android:layout_alignLeft="@+id/email_Registro"
+        android:layout_alignStart="@+id/email_Registro"
+        android:layout_below="@+id/email_Registro"
+        android:layout_marginTop="15dp"
+        android:layout_x="55dp"
+        android:layout_y="90dp"
+        android:ems="10"
+        android:hint="nombre"
+        android:inputType="textPersonName"
+        tools:layout_editor_absoluteX="73dp"
+        tools:layout_editor_absoluteY="113dp" />
+
+    <EditText
+        android:id="@+id/contraseña_Registro"
+        android:layout_width="270dp"
+        android:layout_height="43dp"
+        android:layout_below="@+id/documento_Registro"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="60dp"
+        android:layout_x="56dp"
+        android:layout_y="143dp"
+        android:ems="10"
+        android:hint="password"
+        android:inputType="textPassword"
+        tools:layout_editor_absoluteX="73dp"
+        tools:layout_editor_absoluteY="174dp" />
+
+    <EditText
+        android:id="@+id/contraseña_Registro2"
+        android:layout_width="270dp"
+        android:layout_height="43dp"
+        android:layout_below="@+id/contraseña_Registro"
+        android:layout_alignStart="@+id/contraseña_Registro"
+        android:layout_alignLeft="@+id/contraseña_Registro"
+        android:layout_marginTop="13dp"
+        android:layout_x="56dp"
+        android:layout_y="143dp"
+        android:ems="10"
+        android:hint="repetir password"
+        android:inputType="textPassword"
+        tools:layout_editor_absoluteX="73dp"
+        tools:layout_editor_absoluteY="174dp" />
+
+</RelativeLayout>

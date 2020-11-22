@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.andres.firebase">
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher_foreground_m"
+        android:label="OdontoTime"
+        android:roundIcon="@mipmap/ic_launcher_m_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name="com.example.andres.OdontoTime.Vista.MenuMedico"/>
+        <activity android:name="com.example.andres.OdontoTime.Vista.MainActivity" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.example.andres.OdontoTime.Vista.CodigoQR" />
+        <activity android:name="com.example.andres.OdontoTime.Vista.Registro" />
+        <activity android:name="com.example.andres.OdontoTime.Vista.loginAdministrador" />
+        <activity android:name="com.example.andres.OdontoTime.Vista.loginUsuario" />
+        <activity android:name="com.example.andres.OdontoTime.Vista.Medico" />
+        <activity android:name="com.example.andres.OdontoTime.Vista.PrescripcionMedica" />
+        <activity android:name="com.example.andres.OdontoTime.Vista.Paciente" />
+        <activity android:name="com.example.andres.OdontoTime.Vista.EnvioPrescipcion" />
+
+        <receiver android:name="com.example.andres.OdontoTime.Modelo.MyReceiver" />
+
+        <activity android:name="com.example.andres.OdontoTime.Modelo.Calendario" />
+        <activity android:name="com.example.andres.OdontoTime.Modelo.View_citas" />
+    </application>
+
+</manifest>
